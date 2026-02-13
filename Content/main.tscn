@@ -620,8 +620,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1612049723]
-position = Vector2(414, 896)
+[node name="Control" type="Control" parent="." unique_id=1802602651]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Control" unique_id=1612049723]
 amount = 20
 texture = ExtResource("4_gpam4")
 lifetime = 4.0
