@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1771018783|3630795319';
+const CACHE_VERSION = '1771019109|3956742932';
 /** @type {string} */
 const CACHE_PREFIX = '14postcard-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
