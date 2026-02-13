@@ -44,6 +44,8 @@ func _ready() -> void:
 	
 	to_stage_3_button.visible = false
 	to_stage_4_button.visible = false
+	to_stage_3_button.disabled = true
+	to_stage_4_button.disabled = true
 	
 	fake_button_2.visible = false
 	fake_button_3.visible = false
@@ -53,6 +55,13 @@ func _ready() -> void:
 	final_button_3.visible = false
 	final_button_4.visible = false
 	final_button_5.visible = false
+	
+	final_button.disabled = true
+	final_button_2.disabled = true
+	final_button_3.disabled = true
+	final_button_4.disabled = true
+	final_button_5.disabled = true
+	
 	
 
 func animate_button(button : Button) -> void:
@@ -69,6 +78,7 @@ func animate_stage_trans(stage_current, stage_next) -> void:
 
 
 func _on_to_stage_2_button_pressed() -> void:
+	to_stage_2_button.disabled = true
 	ok_sfx.play()
 	animate_button(to_stage_2_button)
 	animate_stage_trans(stage_1,stage_2)
@@ -76,9 +86,13 @@ func _on_to_stage_2_button_pressed() -> void:
 	fake_button_2.visible = true
 	await get_tree().create_timer(2.0).timeout
 	identification_player.play("identification")
+	to_stage_2_button.visible = false
+	await get_tree().create_timer(5.0).timeout
+	to_stage_3_button.disabled = false
 
 
 func _on_to_stage_3_button_pressed() -> void:
+	to_stage_3_button.disabled = true
 	ok_sfx.play()
 	animate_button(to_stage_3_button)
 	animate_stage_trans(stage_2,stage_3)
@@ -86,6 +100,8 @@ func _on_to_stage_3_button_pressed() -> void:
 	fake_button_3.visible = true
 	await get_tree().create_timer(1.0).timeout
 	cat_player.play("cat_appear")
+	to_stage_3_button.visible = false
+	to_stage_4_button.disabled = false
 
 func _on_to_stage_4_button_pressed() -> void:
 	ok_sfx.play()
@@ -99,7 +115,12 @@ func _on_to_stage_4_button_pressed() -> void:
 	
 	to_stage_2_button.visible = false
 	to_stage_3_button.visible = false
-	#to_stage_4_button.visible = false
+
+	final_button.disabled = false
+	final_button_2.disabled = false
+	final_button_3.disabled = false
+	final_button_4.disabled = false
+	final_button_5.disabled = false
 
 
 func _on_fake_button_1_pressed() -> void:

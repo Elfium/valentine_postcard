@@ -1411,7 +1411,6 @@ offset_right = 103.5
 offset_bottom = 296.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Бемяубе)))"
 label_settings = ExtResource("3_2jbd6")
 horizontal_alignment = 1
 vertical_alignment = 1
